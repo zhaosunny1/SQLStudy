@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <envs>
+      <env name="-Dfile.encoding" value="UTF-8" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="cn.zhaosunny.sqlite3.Main" />
+    <module name="SQLStudy.main" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
