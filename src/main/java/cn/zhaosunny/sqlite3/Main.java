@@ -2,8 +2,6 @@ package cn.zhaosunny.sqlite3;
 
 
 import org.sqlite.SQLiteConnection;
-import org.sqlite.SQLiteDataSource;
-import org.sqlite.jdbc4.JDBC4PreparedStatement;
 import org.sqlite.jdbc4.JDBC4ResultSet;
 
 import java.io.File;
@@ -19,11 +17,10 @@ public class Main {
     }
 
     public static void readDb() throws SQLException {
-        SQLiteConnection connection = null;
+        Connection connection = null;
         try {
             String dbPath = "jdbc:sqlite:D:/AWebProjects/SQLStudy/databases/user.db";
-            connection =
-                    connection = ((SQLiteConnection) DriverManager.getConnection(dbPath));
+            connection = ((SQLiteConnection) DriverManager.getConnection(dbPath));
             System.out.println("连接成功");
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from user;");
@@ -33,11 +30,13 @@ public class Main {
             System.out.println("------------------------------");
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "select name, age from user where name = ?");
-           // preparedStatement.setString(1, "name");
+            // preparedStatement.setString(1, "name");
             preparedStatement.setString(1, "张三");
 
             ResultSet resultSet1 = preparedStatement.executeQuery();
             printResultSet(list, resultSet1);
+            //查询所有表
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } finally {

@@ -1,10 +1,12 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <envs>
       <env name="-Dfile.encoding" value="UTF-8" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="cn.zhaosunny.sqlite3.Main" />
-    <module name="SQLStudy.main" />
+    <module name="SQLStudy" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
